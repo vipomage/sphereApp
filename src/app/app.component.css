@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  margin: 0 auto;
+  width: fit-content;
+}
+.random-sphere-container {
+  font-size: 1.5rem;
+}
+img {
+  width: 500px;
+}
+button {
+  margin: 15px 0;
+  padding: 10px 30px;
+}
+ol {
+  width: 500px;
+  text-align: center;
+}
+.output {
+  text-align: center;
+  margin: 0 auto;
+  display: table;
+}
+.result {
+  font-size: 2rem;
+  text-decoration: underline;
+}
