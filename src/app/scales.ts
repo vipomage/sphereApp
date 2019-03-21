@@ -27,6 +27,9 @@ export class Scales {
   };
 
   // Sums the weight of given Sphere | Sphere[]
-  private calcSum = (...spheres): number =>
-    spheres.reduce((prev, current) => prev + current.weight, 0);
+  private calcSum = (spheres: Sphere[] | Sphere): number => {
+    return Array.isArray(spheres)
+      ? spheres.reduce((prev, current) => prev + current.weight, 0)
+      : spheres.weight;
+  };
 }
