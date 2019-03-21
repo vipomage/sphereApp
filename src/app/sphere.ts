@@ -4,5 +4,3 @@ export class Sphere {
     this.weight = weight;
   }
 }
-
-

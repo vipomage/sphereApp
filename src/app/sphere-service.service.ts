@@ -7,7 +7,8 @@ import { Sphere } from './sphere';
 export class SphereService {
   private spheres: Sphere[] = [];
   // Returns a random number between 0 - (max) is exclusive
-  static getRandomNum = (max: number): number => Math.floor(Math.random() * Math.floor(max));
+  static getRandomNum = (max: number): number =>
+    Math.floor(Math.random() * Math.floor(max));
   // Generates 7 Spheres with one random with extra weight
   generateSpheres = (): Sphere[] => {
     if (this.spheres) {

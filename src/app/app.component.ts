@@ -51,13 +51,17 @@ export class AppComponent implements OnInit {
   private logAction = (action: string): void => {
     this.actions.push(action);
   };
-
-  private findBetweenThree =
-    (sphereTriplet: Sphere[],rightSide?: boolean): string => {
+  // Compares given subset of triplets and returns the heaviest among them
+  private findBetweenThree = (
+    sphereTriplet: Sphere[],
+    rightSide?: boolean
+  ): string => {
     const left = sphereTriplet[0];
     const right = sphereTriplet[1];
     let heaviestOrderNo;
-    this.logAction(`Comparing sphere ${rightSide ? '4' : '1'} to ${rightSide ? '5' : '2'}`);
+    this.logAction(
+      `Comparing sphere ${rightSide ? '4' : '1'} to ${rightSide ? '5' : '2'}`
+    );
     const result = this.scales.compareSides(left, right);
     if (result === Result.Equal) {
       this.logAction('They are equal');

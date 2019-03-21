@@ -10,7 +10,11 @@ export class Scales {
   private leftSideValue: number;
   private rightSideValue: number;
 
-  public compareSides = (leftSide: Sphere[] | Sphere, rightSide: Sphere[] | Sphere ): Result => {
+  //Compares given Sphere | Sphere[] (Left - Right) returns Result[Equal,Left,Right]
+  public compareSides = (
+    leftSide: Sphere[] | Sphere,
+    rightSide: Sphere[] | Sphere
+  ): Result => {
     this.leftSideValue = this.calcSum(leftSide);
     this.rightSideValue = this.calcSum(rightSide);
 
@@ -22,6 +26,7 @@ export class Scales {
     return Result.Equal;
   };
 
+  // Sums the weight of given Sphere | Sphere[]
   private calcSum = (...spheres): number =>
-     spheres.reduce((prev, current) => prev + current.weight, 0);
+    spheres.reduce((prev, current) => prev + current.weight, 0);
 }
