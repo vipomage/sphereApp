@@ -6,19 +6,19 @@
     </div>
     <div *ngIf="spheres" class="random-sphere-container">
       <h4>7 Random Spheres</h4>
-      <ol>
+      <ol >
         <li *ngFor="let sphere of spheres">
           Sphere with weight {{ sphere.weight }}
         </li>
       </ol>
     </div>
   </div>
-  <button (click)="find()">{{ result ? 'Rerun with new set' : 'Find' }}</button>
-  <div class="output" *ngIf="scales.actions.length > 0">
+  <button (click)="find()">{{ output ? 'Rerun with new set' : 'Find' }}</button>
+  <div class="output" *ngIf="output">
     <h4>Actions taken</h4>
     <ol>
-      <li *ngFor="let action of scales.actions">{{ action }}</li>
+      <li *ngFor="let action of actions">{{ action }}</li>
     </ol>
   </div>
-  <div class="result" *ngIf="result">{{ result }}</div>
+  <div class="result" *ngIf="output">{{ output }}</div>
 </div>
